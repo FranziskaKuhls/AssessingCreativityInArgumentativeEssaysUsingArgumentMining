@@ -1,0 +1,18 @@
+This is the source code for the masters's thesis "Bewertung der Kreativität in argumentativen Aufsätzen mithilfe von Argument Mining und anderen Methoden des Natural Language Processing". Three different models for assessing creativity ware presented in this work. The first model is the "Creativity Support Tool" from Swathi Krishnaraja (https://github.com/SwathiKrishnaraja/creativity-support-tool, https://github.com/SwathiKrishnaraja/creativity-ml-server). The other two were implemented in the context of the master's thesis itself.
+
+To get the code running please follow the stepf below:
+
+0. Download or create models: create Topic Models: run createModels.py
+   download Argument Mining models from the source given in the README in the correct directory.
+
+1. navigate to src/creativity_support_tool/
+2. clone the git repo: https://github.com/SwathiKrishnaraja/creativity-ml-server 
+3. run: src/creativity_support_tool/creativity-ml-server/server.py (on Localhost Port 5000)
+4. run: src/creativity_support_tool/CreativityMLServerWithArgumentMining/cstWithAcl/server_ACL.py
+5. run: src/creativity_support_tool/CreativityMLServerWithArgumentMining/cstWithTarger/server_Targer.py
+
+6. run: main.py with the following parameters
+    - Essay
+    - Tags
+  
+ Note: The server_Targer receives the answer generaded by Targer as a string and uses them to parse the essay. Make sure that the essay has been analysed by a model from (https://github.com/uhh-lt/targer)
